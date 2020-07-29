@@ -23,7 +23,7 @@ const (
 
 const _avgNumStopsPerLine = 30
 
-const _baseURL = "http://datamine.mta.info/mta_esi.php?key="
+const _baseURL = "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs"
 
 // Config defines how to configure the subway client.
 type Config struct {
@@ -40,7 +40,7 @@ type NYCTA struct {
 // NewNYCTA creates a new New York City Transit Authority client.
 // An error will be returned if the configuration is invalid.
 func NewNYCTA(cfg *Config) (*NYCTA, error) {
-	url := "http://datamine.mta.info/mta_esi.php?key=" + cfg.APIKey + "&feed_id=" + strconv.Itoa(cfg.FeedID)
+	url := "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs" + cfg.APIKey + "&feed_id=" + strconv.Itoa(cfg.FeedID)
 	return &NYCTA{
 
 		cfg: cfg,
