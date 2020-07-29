@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ztstewart/subwayclock/internal/models"
+	"github.com/ayellen/pisub/internal/models"
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/basicfont"
 	"golang.org/x/image/math/fixed"
