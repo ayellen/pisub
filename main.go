@@ -5,16 +5,16 @@ import (
 	"log"
 	"time"
 
-	"github.com/ztstewart/subwayclock/internal/client"
-	"github.com/ztstewart/subwayclock/internal/inky"
-	"github.com/ztstewart/subwayclock/internal/render"
+	"github.com/ayellen/pisub/internal/client"
+	"github.com/ayellen/pisub/internal/inky"
+	"github.com/ayellen/pisub/internal/render"
 	"periph.io/x/periph/conn/gpio/gpioreg"
 	"periph.io/x/periph/conn/spi/spireg"
 	"periph.io/x/periph/host"
 )
 
 // An example stop ID for testing purposes.
-const _courtSquareStopID = "719"
+const _courtSquareStopID = "310"
 const _7NorthDir = "(7) MAIN ST"
 const _7SouthDir = "(7) 34 - HUDSON"
 
@@ -23,7 +23,7 @@ const _updateFrequency = 1 * time.Minute
 func main() {
 	nycta, err := client.NewNYCTA(&client.Config{
 		APIKey: "3719848b211666893b5a4b891d6db586",
-		FeedID: 51,
+		FeedID: 1,
 	})
 
 	if err != nil {
