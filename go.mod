@@ -1,4 +1,4 @@
-module github.com/ztstewart/subwayclock
+module github.com/ayellen/pisub
 
 go 1.12
 
