@@ -40,22 +40,9 @@ type NYCTA struct {
 // NewNYCTA creates a new New York City Transit Authority client.
 // An error will be returned if the configuration is invalid.
 func NewNYCTA(cfg *Config) (*NYCTA, error) {
-    const https = require('https');
-    https.get(
-      "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs",
-      { headers: { "x-api-key": 'cfg.APIKey'}
-      },
-      (resp) => {
-        resp.on('data', (chunk) => {
-          console.log("Receiving Data");
-        });
-        resp.on('end', () => {
-          console.log("Finished receiving data");
-        });
-      }).on("error", (err) => {
-        console.log("Error: " + err.message);
-      });
-{
+	url := "http://datamine.mta.info/mta_esi.php?key=" + cfg.APIKey + "&feed_id=" + strconv.Itoa(cfg.FeedID)
+	return &NYCTA{
+
 		cfg: cfg,
 		url: url,
 	}, nil
