@@ -22,7 +22,7 @@ const _updateFrequency = 1 * time.Minute
 
 func main() {
 	nycta, err := client.NewNYCTA(&client.Config{
-		APIKey: "3719848b211666893b5a4b891d6db586",
+		APIKey: "sfr3i5mudJ38g1qPHIlJd6kpfCNuWNSr2jVYKe0C",
 		FeedID: 1,
 	})
 
