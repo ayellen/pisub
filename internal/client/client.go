@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/ztstewart/subwayclock/internal/client/transit_realtime"
-	"github.com/ztstewart/subwayclock/internal/models"
+	"github.com/ayellen/pisub/internal/client/transit_realtime"
+	"github.com/ayellen/pisub/internal/models"
 )
 
 // The MTA considers one physical station to be multiple stop IDs depending
